@@ -1,4 +1,4 @@
 import './bootstrap-vue';
-required('./VeeValidate')
-required('./axios')
-required('./vue-loading-overlay')
+require('./VeeValidate')
+require('./axios')
+require('./vue-loading-overlay')
