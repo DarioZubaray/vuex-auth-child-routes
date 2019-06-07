@@ -4,7 +4,7 @@
             <b-form-input type="email" 
                           autocomplete="off" 
                           v-model="user.email" 
-                          v-validate="'required | email'"
+                          v-validate="'required|email'"
                           name="email"
                           placeholder="Introduce el email admin@vue.com">
             </b-form-input>
@@ -15,7 +15,7 @@
             <b-form-input type="password" 
                           autocomplete="off" 
                           v-model="user.password" 
-                          v-validate="'required | min:6'"
+                          v-validate="'required|min:6'"
                           name="password"
                           placeholder="Introduce la contraseña @Password1">
             </b-form-input>
@@ -35,7 +35,7 @@ export default {
             type: Object,
             required: true,
             validator: user => {
-                if( !user.hasOwnProperty('email') && !user.hasOwnProperty('password')) {
+                if( !user.hasOwnProperty('email') || !user.hasOwnProperty('password')) {
                     console.warn('Usuario no valido')
                     return false
                 }
