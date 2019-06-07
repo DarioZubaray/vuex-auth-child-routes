@@ -13,8 +13,8 @@ export default {
     data() {
         return {
             user: {
-                email:'',
-                password: ''
+                email:'admin@vue.com',
+                password: '@Password1'
             }
         }
     }
