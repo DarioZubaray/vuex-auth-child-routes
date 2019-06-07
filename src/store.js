@@ -6,7 +6,8 @@ import auth from '@/modules/authentication'
 Vue.use(Vuex)
 
 const vuexLocal = new VuexPersistence({
-  storage: window.localStorage
+  storage: window.localStorage,
+  modules: ['auth']
 })
 
 export default new Vuex.Store({
@@ -18,8 +19,8 @@ export default new Vuex.Store({
       state.loading = bool
     }
   },
-  modules: [
+  modules: {
     auth
-  ],
+  },
   plugins: [vuexLocal.plugin]
 })
