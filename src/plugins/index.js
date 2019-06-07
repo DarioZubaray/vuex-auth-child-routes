@@ -1,4 +1,3 @@
-import './bootstrap-vue';
+require('./bootstrap-vue')
 require('./VeeValidate')
 require('./axios')
-require('./vue-loading-overlay')
