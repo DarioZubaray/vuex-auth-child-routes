@@ -17,9 +17,9 @@ import Loading from 'vue-loading-overlay'
 import 'vue-loading-overlay/dist/vue-loading.css'
 
 export default {
-  components: [
-    NavigationLogged, NavigationGuest
-  ],
+  components: {
+    NavigationLogged, NavigationGuest, Loading
+  },
   computed: {
     ...mapState('auth', ['isLogged']),
     ...mapState(['loading'])
