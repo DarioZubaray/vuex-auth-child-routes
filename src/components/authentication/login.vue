@@ -1,8 +1,6 @@
 <template>
     <b-card
-        overlay
-        img-src="./assets/pexels-photo-cyty.jpeg"
-        img-alt="Card Image"
+        bg-variant="dark"
         text-variant="white"
         title="Inicio de sesión"
         sub-title="Enter the matrix"
@@ -14,6 +12,7 @@
                                 autocomplete="off" 
                                 v-model="user.email" 
                                 v-validate="'required|email'"
+                                :state="validateState('email')"
                                 name="email"
                                 placeholder="Introduce el email admin@vue.com">
                     </b-form-input>
@@ -25,6 +24,7 @@
                                 autocomplete="off" 
                                 v-model="user.password" 
                                 v-validate="'required|min:6'"
+                                :state="validateState('password')"
                                 name="password"
                                 placeholder="Introduce la contraseña @Password1">
                     </b-form-input>
@@ -40,6 +40,7 @@
 </template>
 
 <script>
+import validationMixin from '@/mixins/validation'
 export default {
     props: {
         user: {
@@ -53,7 +54,8 @@ export default {
                 return true
             }
         }
-    }
+    },
+    mixins: [validationMixin]
 }
 </script>
 
