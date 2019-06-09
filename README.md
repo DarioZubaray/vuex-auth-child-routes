@@ -1,4 +1,4 @@
-# vue-crud-todo
+# vuex-auth-child-routes
 
 <img src="/images/preview.jpg" >
 
