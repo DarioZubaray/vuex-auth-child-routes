@@ -23,7 +23,7 @@
                     <b-form-input type="password" 
                                 autocomplete="off" 
                                 v-model="user.password" 
-                                v-validate="'required|min:6'"
+                                v-validate="'required|min:6|strength_password'"
                                 :state="validateState('password')"
                                 name="password"
                                 placeholder="Introduce la contraseña @Password1">
