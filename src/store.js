@@ -6,21 +6,21 @@ import auth from '@/modules/authentication'
 Vue.use(Vuex)
 
 const vuexLocal = new VuexPersistence({
-  storage: window.localStorage,
-  modules: ['auth']
+    storage: window.localStorage,
+    modules: ['auth']
 })
 
 export default new Vuex.Store({
-  state: {
-    loading: false
-  },
-  mutations: {
-    setLoading(state, bool) {
-      state.loading = bool
-    }
-  },
-  modules: {
-    auth
-  },
-  plugins: [vuexLocal.plugin]
+    state: {
+        loading: false
+    },
+    mutations: {
+        setLoading(state, bool) {
+            state.loading = bool
+        }
+    },
+    modules: {
+        auth
+    },
+    plugins: [vuexLocal.plugin]
 })

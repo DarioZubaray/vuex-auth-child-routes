@@ -1,8 +1,11 @@
 <template>
     <b-card
-        bg-variant="dark"
-        text-variant="white"
-        title="Inicio de sesión"
+        border-variant="dark"
+        header="Inicio de sesión"
+        header-border-variant="dark"
+        header-text-variant="dark"
+        align="center"
+        text-variant="dark"
         sub-title="Enter the matrix"
     >
         <b-card-text>
